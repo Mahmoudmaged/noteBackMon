@@ -8,7 +8,7 @@ const port = process.env.PORT
 app.use('/api/v1/users', require('./api/user.routes'))
 app.use('/api/v1/notes', require('./api/note.routes'))
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.send('welcome')
 });
 dbConnection()
